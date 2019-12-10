@@ -60,6 +60,6 @@ initial
     #30;
     SW[0] = 1'b1; // enable hazard lights
     #30;
-	#10000 $finish;
+	#1000 $finish;
   end
 endmodule
