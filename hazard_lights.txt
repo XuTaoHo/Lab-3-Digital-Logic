@@ -1,0 +1,7 @@
+module hazard_lights(
+    input clock,
+    input enable,
+    input reset,
+    output reg [5:0] hazard_out
+);
+
