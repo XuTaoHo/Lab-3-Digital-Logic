@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/xutao/Desktop/Digital_Logic/Lab 3/") File("Lab3.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/") File("Lab3.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

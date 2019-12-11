@@ -6,7 +6,7 @@ module next_state(
     output reg [1:0] current_state
 );
 
-always @ (posedge clock or negedge reset) begin
+always @ (reset or KEY or SW) begin
     if (reset == 0) begin
         current_state = 0; // reset sets next state to idle state, state 0
     end

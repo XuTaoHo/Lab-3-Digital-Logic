@@ -35,7 +35,7 @@ always begin
 end
 
 initial begin
-$monitor($time, " display0 = %b, LED = %b button = %b, switch = %b, clock = %b", disp0[7:0],, LEDR[9:0], KEY[0], SW[9:0], system_clock, ); 
+$monitor($time, " display0 = %b, LED = %b button = %b, switch = %b, clock = %b", disp0[7:0],, LEDR[9:0], KEY[1:0], SW[9:0], system_clock); 
 end
 
 
@@ -56,14 +56,17 @@ initial
     KEY[0] = 1'b0; // generate another negative edge to turn reset off
     #5;
     KEY[0] = 1'b1;
-    #30;
+    #50;
+    /*
     SW[1] = 1'b1; // enable turn lights
+    #5
     KEY[1] = 1'b1; // right turn signal
-    #30;
+    #50;
     KEY[1] = 0; // left turn signal
-    #30;
+    #50;
     SW[0] = 1'b1; // enable hazard lights
-    #30;
-	#1000 $finish;
+    #50;
+    */
+	#100 $finish;
   end
 endmodule

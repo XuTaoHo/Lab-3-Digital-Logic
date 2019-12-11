@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Tue Dec 10 21:31:51 2019
+Tue Dec 10 23:42:19 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,15 +49,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 10 21:31:51 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 10 23:42:19 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 65                                          ;
-;     Total combinational functions  ; 62                                          ;
-;     Dedicated logic registers      ; 35                                          ;
-; Total registers                    ; 35                                          ;
+; Total logic elements               ; 67                                          ;
+;     Total combinational functions  ; 67                                          ;
+;     Dedicated logic registers      ; 33                                          ;
+; Total registers                    ; 33                                          ;
 ; Total pins                         ; 149                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -191,20 +191,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 65    ;
+; Estimated Total logic elements              ; 67    ;
 ;                                             ;       ;
-; Total combinational functions               ; 62    ;
+; Total combinational functions               ; 67    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 28    ;
-;     -- 3 input functions                    ; 4     ;
-;     -- <=2 input functions                  ; 30    ;
+;     -- 4 input functions                    ; 31    ;
+;     -- 3 input functions                    ; 9     ;
+;     -- <=2 input functions                  ; 27    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 39    ;
+;     -- normal mode                          ; 44    ;
 ;     -- arithmetic mode                      ; 23    ;
 ;                                             ;       ;
-; Total registers                             ; 35    ;
-;     -- Dedicated logic registers            ; 35    ;
+; Total registers                             ; 33    ;
+;     -- Dedicated logic registers            ; 33    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 149   ;
@@ -212,9 +212,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 42    ;
-; Total fan-out                               ; 485   ;
-; Average fan-out                             ; 1.13  ;
+; Maximum fan-out                             ; 43    ;
+; Total fan-out                               ; 495   ;
+; Average fan-out                             ; 1.14  ;
 +---------------------------------------------+-------+
 
 
@@ -223,30 +223,26 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                              ; Entity Name    ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------+--------------+
-; |Lab3                                ; 62 (1)              ; 35 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 149  ; 0            ; 0          ; |Lab3                                                            ; Lab3           ; work         ;
+; |Lab3                                ; 67 (1)              ; 33 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 149  ; 0            ; 0          ; |Lab3                                                            ; Lab3           ; work         ;
 ;    |clock_divider:system_control|    ; 40 (40)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|clock_divider:system_control                               ; clock_divider  ; work         ;
-;    |next_state:state_control|        ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|next_state:state_control                                   ; next_state     ; work         ;
-;    |output_control:control_output|   ; 19 (11)             ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output                              ; output_control ; work         ;
+;    |next_state:state_control|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|next_state:state_control                                   ; next_state     ; work         ;
+;    |output_control:control_output|   ; 24 (11)             ; 7 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output                              ; output_control ; work         ;
 ;       |hazard_lights:hazard_control| ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|hazard_lights:hazard_control ; hazard_lights  ; work         ;
 ;       |sevenseg:currentstate|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|sevenseg:currentstate        ; sevenseg       ; work         ;
-;       |turn_lights:control|          ; 4 (4)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|turn_lights:control          ; turn_lights    ; work         ;
+;       |turn_lights:control|          ; 9 (9)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|turn_lights:control          ; turn_lights    ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                 ;
-+----------------------------------------------------+---------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                   ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------------------------+------------------------+
-; output_control:control_output|LEDR[0]              ; output_control:control_output|LEDR[2] ; yes                    ;
-; output_control:control_output|LEDR[1]              ; output_control:control_output|LEDR[2] ; yes                    ;
-; output_control:control_output|LEDR[2]              ; output_control:control_output|LEDR[2] ; yes                    ;
-; output_control:control_output|LEDR[7]              ; output_control:control_output|LEDR[9] ; yes                    ;
-; output_control:control_output|LEDR[8]              ; output_control:control_output|LEDR[9] ; yes                    ;
-; output_control:control_output|LEDR[9]              ; output_control:control_output|LEDR[9] ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                                       ;                        ;
-+----------------------------------------------------+---------------------------------------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; next_state:state_control|current_state[1]          ; VCC                 ; yes                    ;
+; next_state:state_control|current_state[0]          ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -256,7 +252,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                                                               ; Reason for Removal                                                                   ;
 +-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
 ; output_control:control_output|hazard_lights:hazard_control|hazard_out[1..5] ; Merged with output_control:control_output|hazard_lights:hazard_control|hazard_out[0] ;
-; Total Number of Removed Registers = 5                                       ;                                                                                      ;
+; output_control:control_output|turn_lights:control|lights_out[1]             ; Merged with output_control:control_output|turn_lights:control|lights[1]              ;
+; Total Number of Removed Registers = 6                                       ;                                                                                      ;
 +-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -265,24 +262,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
+; Total registers                              ; 33    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Clear ; 31    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; reset                                  ; 42      ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; reset                                    ; 43      ;
+; output_control:control_output|left_right ; 5       ;
+; Total number of inverted registers = 2   ;         ;
++------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -290,10 +288,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3|next_state:state_control|current_state[0]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights_out[1] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights[2]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Lab3|output_control:control_output|LEDR[2]                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights_out[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights[2]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Lab3|next_state:state_control|current_state[0]                       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |Lab3|output_control:control_output|LEDR[9]                           ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |Lab3|output_control:control_output|LEDR[1]                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -302,7 +301,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+---------+------------------------------------------------+
 ; Parameter Name ; Value   ; Type                                           ;
 +----------------+---------+------------------------------------------------+
-; counter_limit  ; 2500000 ; Signed Integer                                 ;
+; counter_limit  ; 5000000 ; Signed Integer                                 ;
 +----------------+---------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -322,23 +321,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 149                         ;
-; cycloneiii_ff         ; 35                          ;
+; cycloneiii_ff         ; 33                          ;
 ;     CLR               ; 31                          ;
-;     ENA CLR           ; 3                           ;
-;     plain             ; 1                           ;
+;     plain             ; 2                           ;
 ; cycloneiii_io_obuf    ; 35                          ;
-; cycloneiii_lcell_comb ; 65                          ;
+; cycloneiii_lcell_comb ; 70                          ;
 ;     arith             ; 23                          ;
 ;         2 data inputs ; 23                          ;
-;     normal            ; 42                          ;
+;     normal            ; 47                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 28                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 31                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.03                        ;
+; Max LUT depth         ; 4.20                        ;
+; Average LUT depth     ; 2.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -357,7 +355,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 10 21:31:25 2019
+    Info: Processing started: Tue Dec 10 23:41:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -390,34 +388,31 @@ Warning (10230): Verilog HDL assignment warning at clock_divider.v(23): truncate
 Warning (12125): Using design file next_state.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: next_state File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 1
 Info (12128): Elaborating entity "next_state" for hierarchy "next_state:state_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 118
+Warning (10240): Verilog HDL Always Construct warning at next_state.v(9): inferring latch(es) for variable "current_state", which holds its previous value in one or more paths through the always construct File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 9
+Info (10041): Inferred latch for "current_state[0]" at next_state.v(14) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
+Info (10041): Inferred latch for "current_state[1]" at next_state.v(14) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
 Warning (12125): Using design file output_control.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: output_control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 1
-Info (12128): Elaborating entity "output_control" for hierarchy "output_control:control_output" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 132
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(24): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 24
+Info (12128): Elaborating entity "output_control" for hierarchy "output_control:control_output" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 133
 Warning (10235): Verilog HDL Always Construct warning at output_control.v(25): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(29): variable "left_right" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(30): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(34): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 34
-Warning (10240): Verilog HDL Always Construct warning at output_control.v(18): inferring latch(es) for variable "LEDR", which holds its previous value in one or more paths through the always construct File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 18
-Info (10041): Inferred latch for "LEDR[0]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[1]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[2]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[3]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[4]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[5]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[6]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[7]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[8]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-Info (10041): Inferred latch for "LEDR[9]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(26): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(30): variable "left_right" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(31): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(36): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 36
+Warning (10240): Verilog HDL Always Construct warning at output_control.v(19): inferring latch(es) for variable "LEDR", which holds its previous value in one or more paths through the always construct File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 19
+Info (10041): Inferred latch for "LEDR[3]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 24
+Info (10041): Inferred latch for "LEDR[4]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 24
+Info (10041): Inferred latch for "LEDR[5]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 24
+Info (10041): Inferred latch for "LEDR[6]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 24
 Warning (12125): Using design file sevenseg.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: sevenseg File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/sevenseg.v Line: 1
-Info (12128): Elaborating entity "sevenseg" for hierarchy "output_control:control_output|sevenseg:currentstate" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 49
+Info (12128): Elaborating entity "sevenseg" for hierarchy "output_control:control_output|sevenseg:currentstate" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 59
 Warning (12125): Using design file turn_lights.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: turn_lights File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/turn_lights.v Line: 1
-Info (12128): Elaborating entity "turn_lights" for hierarchy "output_control:control_output|turn_lights:control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 57
+Info (12128): Elaborating entity "turn_lights" for hierarchy "output_control:control_output|turn_lights:control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 68
 Warning (12125): Using design file hazard_lights.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: hazard_lights File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/hazard_lights.v Line: 1
-Info (12128): Elaborating entity "hazard_lights" for hierarchy "output_control:control_output|hazard_lights:hazard_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 64
+Info (12128): Elaborating entity "hazard_lights" for hierarchy "output_control:control_output|hazard_lights:hazard_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 75
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
     Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
@@ -454,18 +449,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "ARDUINO_IO[14]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
     Warning (13040): bidirectional pin "ARDUINO_IO[15]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
     Warning (13040): bidirectional pin "ARDUINO_RESET_N" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 60
-Warning (13012): Latch output_control:control_output|LEDR[0] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
-Warning (13012): Latch output_control:control_output|LEDR[1] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
-Warning (13012): Latch output_control:control_output|LEDR[2] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
-Warning (13012): Latch output_control:control_output|LEDR[7] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal output_control:control_output|light_enable File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 12
-Warning (13012): Latch output_control:control_output|LEDR[8] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal output_control:control_output|light_enable File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 12
-Warning (13012): Latch output_control:control_output|LEDR[9] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal output_control:control_output|light_enable File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
     Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
@@ -569,16 +552,16 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 52
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 52
-Info (21057): Implemented 217 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 216 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 35 bidirectional pins
-    Info (21061): Implemented 68 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 179 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Tue Dec 10 21:31:52 2019
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:51
+    Info (21061): Implemented 67 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 168 warnings
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Tue Dec 10 23:42:19 2019
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:11
 
 
 +------------------------------------------+

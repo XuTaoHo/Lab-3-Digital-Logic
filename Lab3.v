@@ -128,7 +128,8 @@ output_control control_output (
 	.clock(system_timing),
 	.reset(reset),
 	.LEDR(LEDR),
-	.HEX0(HEX0)
+	.HEX0(HEX0),
+	.KEY(KEY)
 );
 
 assign HEX5 = 8'b1111_1111;
