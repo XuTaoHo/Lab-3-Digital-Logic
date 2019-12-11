@@ -12,11 +12,11 @@ always @ (posedge clock or negedge reset) begin
     end
 
     else if (reset == 1) begin
-        if (KEY[0] == 1) begin
+        if (SW[0] == 1) begin
             current_state = 2'b11; // sets next state to hazard state, state 3
         end
 
-        else if ((KEY[0] == 0) && (SW[1] == 1)) begin // hazard off and turn enable on, state 1 or 2
+        else if ((SW[0] == 0) && (SW[1] == 1)) begin // hazard off and turn enable on, state 1 or 2
             if (KEY[1] == 0) begin
                 current_state = 2'b01; // left turn signal, state 1
             end
@@ -26,7 +26,7 @@ always @ (posedge clock or negedge reset) begin
             end
         end
 
-        else if ((KEY[0] == 0) && (SW[1] == 0)) begin // hazard off and turn enable off
+        else if ((SW[0] == 0) && (SW[1] == 0)) begin // hazard off and turn enable off
             current_state = 0; // idle state, state 0
         end
     end

@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at clock_divider.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/clock_divider.v Line: 11
+Warning (10268): Verilog HDL information at clock_divider.v(11): always construct contains both blocking and non-blocking assignments File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/clock_divider.v Line: 11

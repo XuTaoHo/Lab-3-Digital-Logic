@@ -15,8 +15,12 @@ assign light_enable = current_state[1] ^ current_state[0];
 wire hazard_enable;
 assign hazard_enable = current_state[1] & current_state[0];
 
-always @ (hazard_enable or light_enable) begin
-    if (hazard_enable) begin
+always @ (hazard_enable or light_enable or reset) begin
+    if (reset == 0) begin
+        LEDR = 0;
+    end
+
+    else if (hazard_enable) begin
         LEDR[9:7] = hazard_assignment[5:3];
         LEDR[2:0] = hazard_assignment[2:0];
     end
@@ -29,6 +33,10 @@ always @ (hazard_enable or light_enable) begin
         else begin
             LEDR[2:0] = led_assignment[2:0];
         end
+    end
+
+    else begin
+        LEDR = 0;
     end
 end
 

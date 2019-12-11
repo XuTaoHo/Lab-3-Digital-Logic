@@ -6,7 +6,7 @@ module clock_divider (
 
 reg [23:0] counter;
 
-parameter counter_limit = 5;//000000; // change when using test bench and downloading to board
+parameter counter_limit = 2500000; // change when using test bench and downloading to board
 
 always @ (posedge clock or negedge reset_n) begin
     if (reset_n == 0) begin

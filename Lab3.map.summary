@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Dec 10 11:02:43 2019
+Analysis & Synthesis Status : Successful - Tue Dec 10 21:31:51 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Lab3
 Top-level Entity Name : Lab3
 Family : MAX 10
-Total logic elements : 67
-    Total combinational functions : 64
+Total logic elements : 65
+    Total combinational functions : 62
     Dedicated logic registers : 35
 Total registers : 35
 Total pins : 149

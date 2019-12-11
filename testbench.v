@@ -51,8 +51,12 @@ initial
     #5;
     KEY[0] = 1'b0; // generate a negative edge to reset system
     #5;
-    KEY[0] = 1'b1; // let go of push button for system to resume operation
+    KEY[0] = 1'b1; // let go of push button
     #5;
+    KEY[0] = 1'b0; // generate another negative edge to turn reset off
+    #5;
+    KEY[0] = 1'b1;
+    #30;
     SW[1] = 1'b1; // enable turn lights
     KEY[1] = 1'b1; // right turn signal
     #30;

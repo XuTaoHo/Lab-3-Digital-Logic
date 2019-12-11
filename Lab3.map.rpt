@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Tue Dec 10 11:02:44 2019
+Tue Dec 10 21:31:51 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,13 +49,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 10 11:02:43 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 10 21:31:51 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 67                                          ;
-;     Total combinational functions  ; 64                                          ;
+; Total logic elements               ; 65                                          ;
+;     Total combinational functions  ; 62                                          ;
 ;     Dedicated logic registers      ; 35                                          ;
 ; Total registers                    ; 35                                          ;
 ; Total pins                         ; 149                                         ;
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; Lab3               ; Lab3               ;
-; Family name                                                      ; MAX 10 FPGA        ; Cyclone V          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -171,19 +171,19 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
-; lab3.v                           ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v           ;         ;
-; clock_divider.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/clock_divider.v  ;         ;
-; next_state.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/next_state.v     ;         ;
-; output_control.v                 ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v ;         ;
-; sevenseg.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/sevenseg.v       ;         ;
-; turn_lights.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/turn_lights.v    ;         ;
-; hazard_lights.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab 3/hazard_lights.v  ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; lab3.v                           ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v           ;         ;
+; clock_divider.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/clock_divider.v  ;         ;
+; next_state.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v     ;         ;
+; output_control.v                 ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v ;         ;
+; sevenseg.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/sevenseg.v       ;         ;
+; turn_lights.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/turn_lights.v    ;         ;
+; hazard_lights.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/hazard_lights.v  ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -191,16 +191,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 67    ;
+; Estimated Total logic elements              ; 65    ;
 ;                                             ;       ;
-; Total combinational functions               ; 64    ;
+; Total combinational functions               ; 62    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 19    ;
-;     -- 3 input functions                    ; 16    ;
-;     -- <=2 input functions                  ; 29    ;
+;     -- 4 input functions                    ; 28    ;
+;     -- 3 input functions                    ; 4     ;
+;     -- <=2 input functions                  ; 30    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 41    ;
+;     -- normal mode                          ; 39    ;
 ;     -- arithmetic mode                      ; 23    ;
 ;                                             ;       ;
 ; Total registers                             ; 35    ;
@@ -212,9 +212,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 36    ;
-; Total fan-out                               ; 483   ;
-; Average fan-out                             ; 1.12  ;
+; Maximum fan-out                             ; 42    ;
+; Total fan-out                               ; 485   ;
+; Average fan-out                             ; 1.13  ;
 +---------------------------------------------+-------+
 
 
@@ -223,10 +223,10 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                              ; Entity Name    ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------+--------------+
-; |Lab3                                ; 64 (1)              ; 35 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 149  ; 0            ; 0          ; |Lab3                                                            ; Lab3           ; work         ;
+; |Lab3                                ; 62 (1)              ; 35 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 149  ; 0            ; 0          ; |Lab3                                                            ; Lab3           ; work         ;
 ;    |clock_divider:system_control|    ; 40 (40)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|clock_divider:system_control                               ; clock_divider  ; work         ;
 ;    |next_state:state_control|        ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|next_state:state_control                                   ; next_state     ; work         ;
-;    |output_control:control_output|   ; 21 (13)             ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output                              ; output_control ; work         ;
+;    |output_control:control_output|   ; 19 (11)             ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output                              ; output_control ; work         ;
 ;       |hazard_lights:hazard_control| ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|hazard_lights:hazard_control ; hazard_lights  ; work         ;
 ;       |sevenseg:currentstate|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|sevenseg:currentstate        ; sevenseg       ; work         ;
 ;       |turn_lights:control|          ; 4 (4)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Lab3|output_control:control_output|turn_lights:control          ; turn_lights    ; work         ;
@@ -234,19 +234,19 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                     ;
-+----------------------------------------------------+-------------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                       ; Free of Timing Hazards ;
-+----------------------------------------------------+-------------------------------------------+------------------------+
-; output_control:control_output|LEDR[0]              ; output_control:control_output|LEDR[2]     ; yes                    ;
-; output_control:control_output|LEDR[1]              ; output_control:control_output|LEDR[2]     ; yes                    ;
-; output_control:control_output|LEDR[2]              ; output_control:control_output|LEDR[2]     ; yes                    ;
-; output_control:control_output|LEDR[7]              ; next_state:state_control|current_state[0] ; yes                    ;
-; output_control:control_output|LEDR[8]              ; next_state:state_control|current_state[0] ; yes                    ;
-; output_control:control_output|LEDR[9]              ; next_state:state_control|current_state[0] ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                                           ;                        ;
-+----------------------------------------------------+-------------------------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                 ;
++----------------------------------------------------+---------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                   ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------------------+------------------------+
+; output_control:control_output|LEDR[0]              ; output_control:control_output|LEDR[2] ; yes                    ;
+; output_control:control_output|LEDR[1]              ; output_control:control_output|LEDR[2] ; yes                    ;
+; output_control:control_output|LEDR[2]              ; output_control:control_output|LEDR[2] ; yes                    ;
+; output_control:control_output|LEDR[7]              ; output_control:control_output|LEDR[9] ; yes                    ;
+; output_control:control_output|LEDR[8]              ; output_control:control_output|LEDR[9] ; yes                    ;
+; output_control:control_output|LEDR[9]              ; output_control:control_output|LEDR[9] ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                                       ;                        ;
++----------------------------------------------------+---------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -280,7 +280,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; reset                                  ; 36      ;
+; reset                                  ; 42      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -290,9 +290,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3|next_state:state_control|current_state[1]                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights_out[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Lab3|next_state:state_control|current_state[0]                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights_out[1] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Lab3|output_control:control_output|turn_lights:control|lights[2]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Lab3|output_control:control_output|LEDR[2]                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -301,7 +302,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+---------+------------------------------------------------+
 ; Parameter Name ; Value   ; Type                                           ;
 +----------------+---------+------------------------------------------------+
-; counter_limit  ; 5000000 ; Signed Integer                                 ;
+; counter_limit  ; 2500000 ; Signed Integer                                 ;
 +----------------+---------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -326,18 +327,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 3                           ;
 ;     plain             ; 1                           ;
 ; cycloneiii_io_obuf    ; 35                          ;
-; cycloneiii_lcell_comb ; 67                          ;
+; cycloneiii_lcell_comb ; 65                          ;
 ;     arith             ; 23                          ;
 ;         2 data inputs ; 23                          ;
-;     normal            ; 44                          ;
+;     normal            ; 42                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 19                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.07                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -356,223 +357,233 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 10 11:02:07 2019
+    Info: Processing started: Tue Dec 10 21:31:25 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mem.v
+    Info (12023): Found entity 1: mem File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/mem.v Line: 39
 Warning (12125): Using design file lab3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Lab3 File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 6
+    Info (12023): Found entity 1: Lab3 File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 6
 Info (12127): Elaborating entity "Lab3" for the top level hierarchy
-Warning (10034): Output port "DRAM_ADDR" at lab3.v(14) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-Warning (10034): Output port "DRAM_BA" at lab3.v(15) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 15
-Warning (10034): Output port "VGA_B" at lab3.v(44) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 44
-Warning (10034): Output port "VGA_G" at lab3.v(45) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 45
-Warning (10034): Output port "VGA_R" at lab3.v(47) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 47
-Warning (10034): Output port "DRAM_CAS_N" at lab3.v(16) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 16
-Warning (10034): Output port "DRAM_CKE" at lab3.v(17) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 17
-Warning (10034): Output port "DRAM_CLK" at lab3.v(18) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 18
-Warning (10034): Output port "DRAM_CS_N" at lab3.v(19) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 19
-Warning (10034): Output port "DRAM_LDQM" at lab3.v(21) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 21
-Warning (10034): Output port "DRAM_RAS_N" at lab3.v(22) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 22
-Warning (10034): Output port "DRAM_UDQM" at lab3.v(23) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 23
-Warning (10034): Output port "DRAM_WE_N" at lab3.v(24) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 24
-Warning (10034): Output port "VGA_HS" at lab3.v(46) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 46
-Warning (10034): Output port "VGA_VS" at lab3.v(48) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 48
-Warning (10034): Output port "GSENSOR_CS_N" at lab3.v(51) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 51
-Warning (10034): Output port "GSENSOR_SCLK" at lab3.v(53) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 53
+Warning (10034): Output port "DRAM_ADDR" at lab3.v(14) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+Warning (10034): Output port "DRAM_BA" at lab3.v(15) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 15
+Warning (10034): Output port "VGA_B" at lab3.v(44) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 44
+Warning (10034): Output port "VGA_G" at lab3.v(45) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 45
+Warning (10034): Output port "VGA_R" at lab3.v(47) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 47
+Warning (10034): Output port "DRAM_CAS_N" at lab3.v(16) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 16
+Warning (10034): Output port "DRAM_CKE" at lab3.v(17) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 17
+Warning (10034): Output port "DRAM_CLK" at lab3.v(18) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 18
+Warning (10034): Output port "DRAM_CS_N" at lab3.v(19) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 19
+Warning (10034): Output port "DRAM_LDQM" at lab3.v(21) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 21
+Warning (10034): Output port "DRAM_RAS_N" at lab3.v(22) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 22
+Warning (10034): Output port "DRAM_UDQM" at lab3.v(23) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 23
+Warning (10034): Output port "DRAM_WE_N" at lab3.v(24) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 24
+Warning (10034): Output port "VGA_HS" at lab3.v(46) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 46
+Warning (10034): Output port "VGA_VS" at lab3.v(48) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 48
+Warning (10034): Output port "GSENSOR_CS_N" at lab3.v(51) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 51
+Warning (10034): Output port "GSENSOR_SCLK" at lab3.v(53) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 53
 Warning (12125): Using design file clock_divider.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: clock_divider File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/clock_divider.v Line: 1
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:system_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 88
-Warning (10230): Verilog HDL assignment warning at clock_divider.v(23): truncated value with size 32 to match size of target (24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/clock_divider.v Line: 23
+    Info (12023): Found entity 1: clock_divider File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/clock_divider.v Line: 1
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:system_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 110
+Warning (10230): Verilog HDL assignment warning at clock_divider.v(23): truncated value with size 32 to match size of target (24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/clock_divider.v Line: 23
 Warning (12125): Using design file next_state.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: next_state File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/next_state.v Line: 1
-Info (12128): Elaborating entity "next_state" for hierarchy "next_state:state_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 96
+    Info (12023): Found entity 1: next_state File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 1
+Info (12128): Elaborating entity "next_state" for hierarchy "next_state:state_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 118
 Warning (12125): Using design file output_control.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: output_control File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 1
-Info (12128): Elaborating entity "output_control" for hierarchy "output_control:control_output" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 104
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(20): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(21): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(25): variable "left_right" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(26): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 26
-Warning (10235): Verilog HDL Always Construct warning at output_control.v(30): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 30
-Warning (10240): Verilog HDL Always Construct warning at output_control.v(18): inferring latch(es) for variable "LEDR", which holds its previous value in one or more paths through the always construct File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 18
-Warning (10034): Output port "LEDR[6..3]" at output_control.v(5) has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 5
-Info (10041): Inferred latch for "LEDR[0]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-Info (10041): Inferred latch for "LEDR[1]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-Info (10041): Inferred latch for "LEDR[2]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-Info (10041): Inferred latch for "LEDR[7]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-Info (10041): Inferred latch for "LEDR[8]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-Info (10041): Inferred latch for "LEDR[9]" at output_control.v(24) File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
+    Info (12023): Found entity 1: output_control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 1
+Info (12128): Elaborating entity "output_control" for hierarchy "output_control:control_output" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 132
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(24): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(25): variable "hazard_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(29): variable "left_right" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(30): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at output_control.v(34): variable "led_assignment" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 34
+Warning (10240): Verilog HDL Always Construct warning at output_control.v(18): inferring latch(es) for variable "LEDR", which holds its previous value in one or more paths through the always construct File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 18
+Info (10041): Inferred latch for "LEDR[0]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[1]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[2]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[3]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[4]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[5]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[6]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[7]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[8]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+Info (10041): Inferred latch for "LEDR[9]" at output_control.v(23) File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
 Warning (12125): Using design file sevenseg.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: sevenseg File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/sevenseg.v Line: 1
-Info (12128): Elaborating entity "sevenseg" for hierarchy "output_control:control_output|sevenseg:currentstate" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 41
+    Info (12023): Found entity 1: sevenseg File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/sevenseg.v Line: 1
+Info (12128): Elaborating entity "sevenseg" for hierarchy "output_control:control_output|sevenseg:currentstate" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 49
 Warning (12125): Using design file turn_lights.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: turn_lights File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/turn_lights.v Line: 1
-Info (12128): Elaborating entity "turn_lights" for hierarchy "output_control:control_output|turn_lights:control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 49
+    Info (12023): Found entity 1: turn_lights File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/turn_lights.v Line: 1
+Info (12128): Elaborating entity "turn_lights" for hierarchy "output_control:control_output|turn_lights:control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 57
 Warning (12125): Using design file hazard_lights.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: hazard_lights File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/hazard_lights.v Line: 1
-Info (12128): Elaborating entity "hazard_lights" for hierarchy "output_control:control_output|hazard_lights:hazard_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 56
+    Info (12023): Found entity 1: hazard_lights File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/hazard_lights.v Line: 1
+Info (12128): Elaborating entity "hazard_lights" for hierarchy "output_control:control_output|hazard_lights:hazard_control" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 64
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 20
-    Warning (13040): bidirectional pin "GSENSOR_SDI" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 54
-    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 55
-    Warning (13040): bidirectional pin "ARDUINO_IO[0]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[1]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[2]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[3]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[4]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[5]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[6]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[7]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[8]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[9]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[10]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[11]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[12]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[13]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[14]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_IO[15]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 58
-    Warning (13040): bidirectional pin "ARDUINO_RESET_N" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 60
-Warning (13012): Latch output_control:control_output|LEDR[0] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/next_state.v Line: 14
-Warning (13012): Latch output_control:control_output|LEDR[1] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/next_state.v Line: 14
-Warning (13012): Latch output_control:control_output|LEDR[2] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/output_control.v Line: 24
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/next_state.v Line: 14
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 20
+    Warning (13040): bidirectional pin "GSENSOR_SDI" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 54
+    Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 55
+    Warning (13040): bidirectional pin "ARDUINO_IO[0]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[1]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[2]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[3]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[4]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[5]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[6]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[7]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[8]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[9]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[10]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[11]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[12]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[13]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[14]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_IO[15]" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 58
+    Warning (13040): bidirectional pin "ARDUINO_RESET_N" has no driver File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 60
+Warning (13012): Latch output_control:control_output|LEDR[0] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
+Warning (13012): Latch output_control:control_output|LEDR[1] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
+Warning (13012): Latch output_control:control_output|LEDR[2] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal next_state:state_control|current_state[0] File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/next_state.v Line: 14
+Warning (13012): Latch output_control:control_output|LEDR[7] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal output_control:control_output|light_enable File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 12
+Warning (13012): Latch output_control:control_output|LEDR[8] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal output_control:control_output|light_enable File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 12
+Warning (13012): Latch output_control:control_output|LEDR[9] has unsafe behavior File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal output_control:control_output|light_enable File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/output_control.v Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 14
-    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 15
-    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 15
-    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 16
-    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 17
-    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 18
-    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 19
-    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 21
-    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 22
-    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 23
-    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 24
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 27
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 27
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 28
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 29
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 30
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 31
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 32
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 38
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 38
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 38
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 38
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 44
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 44
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 44
-    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 44
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 45
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 45
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 45
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 45
-    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 46
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 47
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 47
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 47
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 47
-    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 48
-    Warning (13410): Pin "GSENSOR_CS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 51
-    Warning (13410): Pin "GSENSOR_SCLK" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 53
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 14
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 15
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 15
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 16
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 17
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 18
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 19
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 21
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 22
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 23
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 24
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 27
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 27
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 28
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 29
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 30
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 31
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 32
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 38
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 38
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 38
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 38
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 44
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 44
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 44
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 44
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 45
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 45
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 45
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 45
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 46
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 47
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 47
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 47
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 47
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 48
+    Warning (13410): Pin "GSENSOR_CS_N" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 51
+    Warning (13410): Pin "GSENSOR_SCLK" is stuck at GND File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 53
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/xutao/Desktop/Digital_Logic/Lab 3/Lab3.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/Lab3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 10
-    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 11
-    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 41
-    Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 52
-    Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab 3/lab3.v Line: 52
-Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 10
+    Warning (15610): No output dependent on input pin "MAX10_CLK2_50" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 11
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 41
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 52
+    Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/lab3.v Line: 52
+Info (21057): Implemented 217 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 35 bidirectional pins
-    Info (21061): Implemented 70 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 175 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Tue Dec 10 11:02:44 2019
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:01:11
+    Info (21061): Implemented 68 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 179 warnings
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Tue Dec 10 21:31:52 2019
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:51
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/xutao/Desktop/Digital_Logic/Lab 3/Lab3.map.smsg.
+The suppressed messages can be found in C:/Users/xutao/Desktop/Digital_Logic/Lab-3-Digital-Logic/Lab3.map.smsg.
 
 

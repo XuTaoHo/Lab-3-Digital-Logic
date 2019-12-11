@@ -67,7 +67,9 @@ module Lab3(
 
 reg reset;
 wire system_timing;
+reg mem_input[1:0];
 wire [1:0] current_state;
+reg [3:0] auto_counter;
 
 //=======================================================
 //  Structural coding
@@ -76,7 +78,27 @@ wire [1:0] current_state;
 initial begin
 	reset = 1'b1;
 end
+/*
+always @ (posedge system_timing or negedge reset_n) begin
+	if (reset_n == 0) begin
+		auto_counter = 0;
+	end
 
+	else if (auto_counter == 10) begin
+		if (mem_input == 2'b11) begin
+			mem_input = 0;
+		end
+
+		else begin
+			mem_input = mem_input + 1;
+		end
+	end
+
+	else begin
+		auto_counter = auto_counter + 1;
+	end
+end
+*/
 always @ (negedge KEY[0]) begin
 	reset = ~reset;
 end
@@ -87,14 +109,20 @@ clock_divider system_control (
 	.out_clock(system_timing)
 );
 
-next_state state_control (
-	.clock(system_timing),
-	.reset(reset),
+next_state state_control ( // when submitting final design, remove this module. This module 
+	.clock(system_timing), // controls what the next output is based on physical inputs, which
+	.reset(reset),		   // will fight for control with the memory module for control of the current state
 	.SW(SW),
 	.KEY(KEY),
 	.current_state(current_state)
 );
-
+/*
+mem auto_state(
+	.address(mem_input),
+	.clock(system_timing),
+	.q(current_state)
+);
+*/
 output_control control_output (
 	.current_state(current_state),
 	.clock(system_timing),
