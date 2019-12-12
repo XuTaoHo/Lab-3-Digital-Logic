@@ -2,12 +2,12 @@ module output_control (
     input [1:0] current_state,
     input clock,
     input reset,
-    input [1:0] KEY,
     output reg [9:0] LEDR,
     output [7:0] HEX0
 );
 
-wire [2:0] led_assignment;
+wire [2:0] led_assignment_right;
+wire [2:0] led_assignment_left;
 wire [5:0] hazard_assignment;
 
 wire light_enable;
@@ -16,7 +16,13 @@ assign light_enable = current_state[1] ^ current_state[0];
 wire hazard_enable;
 assign hazard_enable = current_state[1] & current_state[0];
 
+
 always @ (hazard_enable or light_enable or reset) begin
+
+ //LEDR[1:0] = current_state;
+
+//end
+
     if (reset == 0) begin
         LEDR = 0;
     end
@@ -28,12 +34,12 @@ always @ (hazard_enable or light_enable or reset) begin
 
     else if (light_enable) begin
         if (left_right) begin
-            LEDR[9:7] = led_assignment[2:0];
+            LEDR[9:7] = led_assignment_left[2:0];
             LEDR[2:0] = 0;
         end
 
         else begin
-            LEDR[2:0] = led_assignment[2:0];
+            LEDR[2:0] = led_assignment_right[2:0];
             LEDR[9:7] = 0;
         end
     end
@@ -41,19 +47,10 @@ always @ (hazard_enable or light_enable or reset) begin
     else begin
         LEDR = 0;
     end
-end
+end 
 
-reg left_right;
-
-always @ (current_state) begin
-    if (current_state == 2'b10) begin
-        left_right = 0;
-    end
-
-    else if (current_state == 2'b01) begin
-        left_right = 1;
-    end
-end
+wire left_right;
+assign left_right = current_state[0]; // 0 means state 2 (right), 1 means state 1 (left)
 
 sevenseg currentstate (
     .value({4'b0, current_state}),
@@ -64,10 +61,9 @@ turn_lights control (
     .clock(clock),
     .left_right(left_right),
     .reset_n(reset),
-    .KEY1(KEY[1]),
     .enable(light_enable),
-    .lights_out(led_assignment_left),
-    .lights_out_right(led_assignment_right)
+    .lights_out_right(led_assignment_right),
+    .lights_out_left(led_assignment_left)
 );
 
 hazard_lights hazard_control(
