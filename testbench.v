@@ -56,17 +56,16 @@ initial
     KEY[0] = 1'b0; // generate another negative edge to turn reset off
     #5;
     KEY[0] = 1'b1;
-    #50;
-    /*
+    #5;
     SW[1] = 1'b1; // enable turn lights
-    #5
+    #5;
     KEY[1] = 1'b1; // right turn signal
-    #50;
+    #100;
     KEY[1] = 0; // left turn signal
-    #50;
-    SW[0] = 1'b1; // enable hazard lights
-    #50;
-    */
+    #5;
+    KEY[1] = 1'b1;
+    //SW[0] = 1'b1; // enable hazard lights
+    #100;
 	#100 $finish;
   end
 endmodule

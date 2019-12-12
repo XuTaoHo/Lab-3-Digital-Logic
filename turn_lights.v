@@ -3,19 +3,20 @@ module turn_lights(
     input left_right,
     input reset_n,
     input enable,
-    input KEY1,
-    output reg [2:0] lights_out
+    input current_state,
+    output reg [2:0] lights_out_left,
+    output reg [2:0] lights_out_right
 );
 
 reg [2:0] lights;
 
-always @ (posedge clock or negedge reset_n or negedge KEY1) begin
+always @ (posedge clock or negedge reset_n or posedge current_state) begin
     if (reset_n == 0) begin
         lights = 3'b0;
         lights_out = 3'b0;
     end
 
-    else if (KEY1 == 0) begin
+    else if (current_state == 0) begin
         lights = 0;
         lights_out = 0;
     end
@@ -25,7 +26,7 @@ always @ (posedge clock or negedge reset_n or negedge KEY1) begin
         lights_out = 3'b0;
     end
 
-    else if ((reset_n == 1) && (enable == 1)) begin
+    else if ((reset_n == 1) && (enable == 1) && (KEY1 == 1)) begin
         if (lights == 3'b111) begin // all on, return to none on
             lights = 3'b0;
         end
@@ -43,13 +44,15 @@ always @ (posedge clock or negedge reset_n or negedge KEY1) begin
         end
 
         if (left_right == 1'b1) begin // left lights
-            lights_out = lights;
+            lights_out_left = lights;
+            lights_out_right = 0;
         end
 
         else if (left_right == 1'b0) begin // right lights, reverse the order of lights
-            lights_out [2] = lights[0];
-            lights_out [1] = lights[1];
-            lights_out [0] = lights[2];
+            lights_out_right [2] = lights[0];
+            lights_out_right [1] = lights[1];
+            lights_out_right [0] = lights[2];
+            lights_out_left = 0;
         end
     end
 end

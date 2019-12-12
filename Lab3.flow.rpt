@@ -1,5 +1,5 @@
 Flow report for Lab3
-Tue Dec 10 23:43:22 2019
+Wed Dec 11 19:42:56 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 10 23:43:06 2019       ;
+; Flow Status                        ; Successful - Wed Dec 11 19:42:38 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; Lab3                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 69 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 68 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 33 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 33                                          ;
+; Total logic elements               ; 73 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 72 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 38 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 38                                          ;
 ; Total pins                         ; 149 / 360 ( 41 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Total memory bits                  ; 8 / 1,677,312 ( < 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/10/2019 23:41:47 ;
+; Start date & time ; 12/11/2019 19:41:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 264510331813751.157604650607616        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 264510331813751.157611847212972        ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mem.bsf                                ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mem_inst.v                             ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mem_bb.v                               ; --            ; --          ; --         ;
@@ -97,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 4767 MB             ; 00:01:10                           ;
-; Fitter               ; 00:00:32     ; 1.0                     ; 5400 MB             ; 00:00:36                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4700 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:14     ; 1.0                     ; 4816 MB             ; 00:00:13                           ;
-; Total                ; 00:01:29     ; --                      ; --                  ; 00:02:08                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4774 MB             ; 00:01:09                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 5400 MB             ; 00:00:37                           ;
+; Assembler            ; 00:00:09     ; 1.0                     ; 4703 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.0                     ; 4826 MB             ; 00:00:13                           ;
+; Total                ; 00:01:34     ; --                      ; --                  ; 00:02:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

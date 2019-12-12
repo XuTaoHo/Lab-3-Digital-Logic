@@ -6,7 +6,19 @@ module next_state(
     output reg [1:0] current_state
 );
 
-always @ (reset or KEY or SW) begin
+reg push;
+
+always @ (negedge KEY[1] or negedge reset) begin
+    if (reset == 0) begin
+        push = 0;
+    end
+
+    else if (KEY[1] == 0) begin
+        push = ~push;
+    end
+end
+
+always @ (reset or KEY[1] or SW) begin
     if (reset == 0) begin
         current_state = 0; // reset sets next state to idle state, state 0
     end
@@ -17,11 +29,11 @@ always @ (reset or KEY or SW) begin
         end
 
         else if ((SW[0] == 0) && (SW[1] == 1)) begin // hazard off and turn enable on, state 1 or 2
-            if (KEY[1] == 0) begin
+            if (push == 0) begin
                 current_state = 2'b01; // left turn signal, state 1
             end
 
-            else if (KEY[1] == 1) begin
+            else if (push == 1) begin
                 current_state = 2'b10; // right turn signal, state 2
             end
         end

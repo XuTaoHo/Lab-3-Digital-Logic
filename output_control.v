@@ -45,12 +45,14 @@ end
 
 reg left_right;
 
-initial begin
-    left_right = 1;
-end
+always @ (current_state) begin
+    if (current_state == 2'b10) begin
+        left_right = 0;
+    end
 
-always @ (negedge KEY[1]) begin // 0 means state 2 (right), 1 means state 1 (left)
-    left_right <= ~left_right;
+    else if (current_state == 2'b01) begin
+        left_right = 1;
+    end
 end
 
 sevenseg currentstate (
@@ -64,7 +66,8 @@ turn_lights control (
     .reset_n(reset),
     .KEY1(KEY[1]),
     .enable(light_enable),
-    .lights_out(led_assignment)
+    .lights_out(led_assignment_left),
+    .lights_out_right(led_assignment_right)
 );
 
 hazard_lights hazard_control(
